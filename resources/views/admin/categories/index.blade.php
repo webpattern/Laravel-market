@@ -25,7 +25,7 @@
                     <td>{{$category->title}}</td>
                     <td>{{$category->published}}</td>
                     <td>
-                        <a href="{{route('admin.category.edit', ['id' => $category->id])}}" class="fa fa-edit"></a>
+                        <a href="{{route('admin.category.edit', $category)}}" class="fa fa-edit"></a>
                     </td>
                 </tr>
             @empty
@@ -38,7 +38,7 @@
         <tfoot>
             <tr colspan="3">
                 <ul class="pagination pull-right">
-                    {{$category->links()}}
+                    {{$categories->links()}}
                 </ul>
             </tr>
         </tfoot>
